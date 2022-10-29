@@ -10,7 +10,13 @@ templates: {}
 jobs: {}
 libraries: []
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  randomPath:
+    name: testModel
+    path: randomPath
+    description: null
+    author: kiran+700@prophecy.io
+    createdAt: '2022-10-29 08:35:38'
 sqlPipeline:
   name: sqlPipeline
   description: kiran+700@prophecy.io
