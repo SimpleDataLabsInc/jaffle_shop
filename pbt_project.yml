@@ -5,7 +5,16 @@ author: kiran+700@prophecy.io
 language: sql
 buildSystem: wheel
 pipelines: {}
-datasets: {}
+datasets:
+  .prophecy/metadata/datasets/newdatasetName:
+    name: newdatasetName
+    description: ''
+    author: kiran+700@prophecy.io
+    createdAt: '2022-11-04 08:41:20'
+    physicalDatasets: {}
+    databaseName: null
+    schemaName: null
+    tableName: null
 templates: {}
 jobs: {}
 libraries: []
@@ -13,9 +22,12 @@ subgraphs: {}
 sqlModels:
   randomPath:
     name: testModel
-    path: randomPath
     description: null
     author: kiran+700@prophecy.io
+    files: null
+    sqlDependencies:
+      models: []
+      datasets: []
     createdAt: '2022-10-29 08:35:38'
 sqlPipeline:
   name: sqlPipeline
