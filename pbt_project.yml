@@ -24,6 +24,24 @@ datasets:
     databaseName: null
     schemaName: sampleSchemaName
     tableName: null
+  .prophecy/metadata/datasets/newdatasetName23322:
+    name: newdatasetName23322
+    description: desc
+    author: kiran+700@prophecy.io
+    createdAt: '2022-11-04 10:07:09'
+    physicalDatasets: {}
+    databaseName: fdsf
+    schemaName: schemaName
+    tableName: t2
+  .prophecy/metadata/datasets/newdatasetName10:
+    name: newdatasetName10
+    description: desc
+    author: kiran+700@prophecy.io
+    createdAt: '2022-11-04 10:14:48'
+    physicalDatasets: {}
+    databaseName: fdsf
+    schemaName: schemaName
+    tableName: t2
 templates: {}
 jobs: {}
 libraries: []
@@ -38,6 +56,17 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2022-10-29 08:35:38'
+  .prophecy/metadata/sqlmodels/testModel2:
+    name: testModel2
+    description: null
+    author: kiran+700@prophecy.io
+    files:
+    - file1
+    - file2
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2022-11-04 10:10:07'
 sqlPipeline:
   name: sqlPipeline
   description: kiran+700@prophecy.io
