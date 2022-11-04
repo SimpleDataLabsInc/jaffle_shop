@@ -15,6 +15,15 @@ datasets:
     databaseName: null
     schemaName: null
     tableName: null
+  .prophecy/metadata/datasets/newdatasetName233:
+    name: newdatasetName233
+    description: exampledescription
+    author: kiran+700@prophecy.io
+    createdAt: '2022-11-04 09:00:22'
+    physicalDatasets: {}
+    databaseName: null
+    schemaName: sampleSchemaName
+    tableName: null
 templates: {}
 jobs: {}
 libraries: []
