@@ -1,0 +1,5 @@
+version: 1
+sqlInfo:
+  databaseName: fdsf
+  schemaName: schemaName
+  tableName: t2
