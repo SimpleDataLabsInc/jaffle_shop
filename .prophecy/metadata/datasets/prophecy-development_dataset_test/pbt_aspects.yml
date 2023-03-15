@@ -1,0 +1,17 @@
+version: 1
+schema:
+  providerType: BigQuery
+  fields:
+  - name: first_order
+    dataType:
+      type: Date
+  - name: most_recent_order
+    dataType:
+      type: Date
+  - name: number_of_orders
+    dataType:
+      type: Integer
+sqlInfo:
+  databaseName: prophecy-development
+  schemaName: dataset
+  tableName: test

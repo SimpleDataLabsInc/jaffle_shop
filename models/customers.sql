@@ -56,7 +56,7 @@ customers AS (
 
   SELECT * 
   
-  FROM {{ ref('stg_customers')}}
+  FROM {{ source('prophecy-development.dataset', 'stg_customers') }}
 
 ),
 
@@ -85,7 +85,7 @@ final_with_order AS (
   
   FROM customer_report
   
-  ORDER BY total_orders  DESC
+  ORDER BY total_orders DESC
 
 )
 

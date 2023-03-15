@@ -1,0 +1,17 @@
+version: 1
+schema:
+  providerType: Databricks
+  fields:
+  - name: customer_id
+    dataType:
+      type: Integer
+  - name: first_name
+    dataType:
+      type: String
+  - name: last_name
+    dataType:
+      type: String
+sqlInfo:
+  databaseName: prophecy-development
+  schemaName: dataset
+  tableName: stg_customers

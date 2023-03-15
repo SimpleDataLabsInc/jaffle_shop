@@ -1,0 +1,25 @@
+---
+version: 2
+sources:
+- name: "prophecy-development.dataset"
+  database: "prophecy-development"
+  schema: "dataset"
+  config:
+    enabled: true
+  tables:
+  - name: "test"
+    columns:
+    - name: "first_order"
+      type: "DATE"
+    - name: "most_recent_order"
+      type: "DATE"
+    - name: "number_of_orders"
+      type: "INT64"
+  - name: "stg_customers"
+    columns:
+    - name: "customer_id"
+      type: "INT64"
+    - name: "first_name"
+      type: "STRING"
+    - name: "last_name"
+      type: "STRING"
