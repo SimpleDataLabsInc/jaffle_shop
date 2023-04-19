@@ -3,19 +3,193 @@ description: ''
 version: 0.0.1-SNAPSHOT
 author: kishore@simpledatalabs.com
 language: sql
-buildSystem: sql
+buildSystem: ''
+buildSystemDetails: null
 pipelines: {}
 datasets: {}
 templates: {}
-jobs: {}
-libraries: []
+jobs:
+  jobs/testScheduleAvcS:
+    name: testScheduleAvcS
+    description: ''
+    fabricUID: 43
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: null
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-04-18 15:28:52'
+    modifiedAt: '2023-04-18 15:28:55'
+    author: sumit@prophecy.io
+    dagName: null
+  jobs/testScheduleAvcS2:
+    name: testScheduleAvcS2
+    description: ''
+    fabricUID: 43
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: null
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-04-18 15:29:48'
+    modifiedAt: '2023-04-19 05:41:42'
+    author: sumit@prophecy.io
+    dagName: null
+  jobs/testSchedule3:
+    name: testSchedule3
+    description: ''
+    fabricUID: 42
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: ''
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2023-04-19 05:48:37'
+    modifiedAt: '2023-04-19 08:12:26'
+    author: sumit@prophecy.io
+    dagName: null
+functions:
+  author: null
+  createdAt: '2023-04-18 15:28:52'
+  modifiedAt: '2023-04-18 15:28:52'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/stg_orders:
+    name: stg_orders
+    description: null
+    author: sumit@prophecy.io
+    files:
+    - models/staging/stg_orders.sql
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+  .prophecy/metadata/sqlmodels/orders:
+    name: orders
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
+    author: sumit@prophecy.io
+    files:
+    - models/orders.sql
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+  .prophecy/metadata/sqlmodels/customers:
+    name: customers
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
+    author: sumit@prophecy.io
+    files:
+    - models/customers.sql
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+  .prophecy/metadata/sqlmodels/stg_payments:
+    name: stg_payments
+    description: null
+    author: sumit@prophecy.io
+    files:
+    - models/staging/stg_payments.sql
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+  .prophecy/metadata/sqlmodels/stg_customers:
+    name: stg_customers
+    description: null
+    author: sumit@prophecy.io
+    files:
+    - models/staging/stg_customers.sql
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+sqlMacros: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/raw_customers:
+    name: raw_customers
+    description: null
+    author: sumit@prophecy.io
+    files:
+    - seeds/raw_customers.csv
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+  .prophecy/metadata/sqlseeds/raw_orders:
+    name: raw_orders
+    description: null
+    author: sumit@prophecy.io
+    files:
+    - seeds/raw_orders.csv
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+  .prophecy/metadata/sqlseeds/raw_payments:
+    name: raw_payments
+    description: null
+    author: sumit@prophecy.io
+    files:
+    - seeds/raw_payments.csv
+    createdAt: '2023-04-19 08:21:11'
+    modifiedAt: '2023-04-19 08:21:11'
+sqlSources: {}
+sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
   description: kishore@simpledatalabs.com
   author: kishore@simpledatalabs.com
   createdAt: '2022-12-09 05:43:56'
+  modifiedAt: '2022-12-09 05:43:56'
 dependencies: '[]'
 projectDependencies: {}
 pipelineConfigurations: {}

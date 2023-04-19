@@ -1,0 +1,67 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "42",
+    "jobId" : "jobs/testSchedule3",
+    "name" : "testSchedule3",
+    "dagName" : "dbt_testSchedule3",
+    "schedule" : "0 0/1 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "defaultClusterSize" : "",
+    "availableFabrics" : [ {
+      "id" : "43",
+      "name" : "composer1"
+    }, {
+      "id" : "42",
+      "name" : "Composer2"
+    }, {
+      "id" : "46",
+      "name" : "compo1"
+    } ],
+    "catchup" : true,
+    "tags" : [ "" ]
+  },
+  "processes" : {
+    "A2Epl2mXC9v3fP2oLc8Bq$$Q8H5pO-XKabyx2pfHc9Bp" : {
+      "id" : "A2Epl2mXC9v3fP2oLc8Bq$$Q8H5pO-XKabyx2pfHc9Bp",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_0",
+        "slug" : "Script_0",
+        "x" : -980,
+        "y" : -320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nq1BcIH9tkJ_vvdEy7JiA$$vsQwjpn8QAWqi7AsvyXKS",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "PaOTpD-cuQC-7RcuZNRoW$$j8Q7N_ELWNZbQ_5lDXGmC",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "print(\"hello\")",
+        "language" : "python",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ ]
+}

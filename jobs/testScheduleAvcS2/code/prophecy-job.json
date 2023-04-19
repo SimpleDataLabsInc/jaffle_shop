@@ -1,0 +1,38 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "43",
+    "jobId" : "jobs/testScheduleAvcS2",
+    "name" : "testScheduleAvcS2",
+    "dagName" : "testScheduleAvcS2",
+    "schedule" : "0 0 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "43",
+      "name" : "composer1"
+    }, {
+      "id" : "42",
+      "name" : "Composer2"
+    }, {
+      "id" : "46",
+      "name" : "compo1"
+    } ],
+    "catchup" : true
+  },
+  "processes" : { },
+  "connections" : [ ]
+}
