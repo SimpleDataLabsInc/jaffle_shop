@@ -33,7 +33,6 @@ jobs:
     createdAt: '2023-04-18 15:28:52'
     modifiedAt: '2023-04-18 15:28:55'
     author: sumit@prophecy.io
-    dagName: null
   jobs/testScheduleAvcS2:
     name: testScheduleAvcS2
     description: ''
@@ -58,7 +57,6 @@ jobs:
     createdAt: '2023-04-18 15:29:48'
     modifiedAt: '2023-04-19 05:41:42'
     author: sumit@prophecy.io
-    dagName: null
   jobs/testSchedule3:
     name: testSchedule3
     description: ''
@@ -83,7 +81,30 @@ jobs:
     createdAt: '2023-04-19 05:48:37'
     modifiedAt: '2023-04-19 08:12:26'
     author: sumit@prophecy.io
-    dagName: null
+  jobs/apr19:
+    name: apr19
+    description: ''
+    fabricUID: 42
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-04-19 13:55:41'
+    modifiedAt: '2023-04-19 13:55:45'
+    author: sumit@prophecy.io
 functions:
   author: null
   createdAt: '2023-04-18 15:28:52'
