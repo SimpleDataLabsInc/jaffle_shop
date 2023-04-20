@@ -127,7 +127,31 @@ jobs:
       clusterId: null
     enabled: false
     createdAt: '2023-04-19 14:14:36'
-    modifiedAt: '2023-04-19 14:14:56'
+    modifiedAt: '2023-04-20 09:17:44'
+    author: sumit@prophecy.io
+  jobs/apr20:
+    name: apr20
+    description: ''
+    fabricUID: 42
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-04-20 08:41:32'
+    modifiedAt: '2023-04-20 08:42:44'
     author: sumit@prophecy.io
 functions:
   author: null

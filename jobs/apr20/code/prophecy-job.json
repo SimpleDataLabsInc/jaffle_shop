@@ -1,0 +1,65 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "42",
+    "jobId" : "jobs/apr20",
+    "name" : "apr20",
+    "dagName" : "sumit_sumit_dbt_apr20",
+    "schedule" : "0 0/1 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "43",
+      "name" : "composer1"
+    }, {
+      "id" : "42",
+      "name" : "Composer2"
+    }, {
+      "id" : "46",
+      "name" : "compo1"
+    } ],
+    "catchup" : true
+  },
+  "processes" : {
+    "kyXSr2SEaYtyLpNakyrJj$$D-oK6ftoTHPz3PuNawm6z" : {
+      "id" : "kyXSr2SEaYtyLpNakyrJj$$D-oK6ftoTHPz3PuNawm6z",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 280,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FOhkKKHpyMdzrfzSfJuBB$$4VrHsgBtkE-TJqvgncIq_",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "4KTdwLwSzR__6iNuFy4SZ$$LtgyBU0AvRBq9t5PTOBZF",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "print(\"hi\")",
+        "language" : "python",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ ]
+}

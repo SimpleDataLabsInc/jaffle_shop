@@ -3,7 +3,7 @@
     "type" : "Composer",
     "fabricId" : "43",
     "jobId" : "jobs/apr19-2",
-    "name" : "sumit_sumit_dbt_apr19_2",
+    "name" : "apr19-2",
     "dagName" : "dbt_apr19_2",
     "schedule" : "0 0/1 * * *",
     "enabled" : false,
