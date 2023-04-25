@@ -7,8 +7,8 @@
     "path" : "",
     "editable" : true
   },
-  "providerType" : "snowflake",
-  "fabricId" : "5639",
+  "providerType" : "bigquery",
+  "fabricId" : "5926",
   "prophecyIDEFolder" : {
     "name" : "",
     "children" : { },

@@ -33,11 +33,11 @@
         "outputs" : [ {
           "id" : "zQ7m5ylK",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
               "name" : "id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
               "name" : "first_name",
@@ -85,11 +85,11 @@
         "inputs" : [ {
           "id" : "SVCfYggl",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
               "name" : "id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
               "name" : "first_name",
@@ -108,19 +108,19 @@
         "outputs" : [ {
           "id" : "xtGCeWY6",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
@@ -153,19 +153,19 @@
         "inputs" : [ {
           "id" : "VOYRbv7e",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
@@ -176,19 +176,19 @@
         "outputs" : [ {
           "id" : "x1S5ZTan",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }

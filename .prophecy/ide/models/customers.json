@@ -48,26 +48,26 @@
         "inputs" : [ {
           "id" : "XNLS7LhR",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "PAYMENT_ID",
+              "name" : "payment_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "PAYMENT_METHOD",
+              "name" : "payment_method",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -75,24 +75,24 @@
         }, {
           "id" : "mMLQKfiG",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }
@@ -103,16 +103,16 @@
         "outputs" : [ {
           "id" : "Q3ubUQkp",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -139,19 +139,19 @@
         "outputs" : [ {
           "id" : "FvdFCPND",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
@@ -207,24 +207,24 @@
         "inputs" : [ {
           "id" : "fO5qrnft",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }
@@ -235,26 +235,26 @@
         "outputs" : [ {
           "id" : "NXit9zPD",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_ORDER",
+              "name" : "first_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "MOST_RECENT_ORDER",
+              "name" : "most_recent_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "NUMBER_OF_ORDERS",
+              "name" : "number_of_orders",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             } ]
           },
@@ -285,41 +285,41 @@
         "inputs" : [ {
           "id" : "Dr6Jig3d",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "FIRST_ORDER",
+              "name" : "first_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "MOST_RECENT_ORDER",
+              "name" : "most_recent_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "TOTAL_ORDERS",
+              "name" : "total_orders",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_LIFETIME_VALUE",
+              "name" : "customer_lifetime_value",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -328,41 +328,41 @@
         "outputs" : [ {
           "id" : "IR6yQNZ8",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "FIRST_ORDER",
+              "name" : "first_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "MOST_RECENT_ORDER",
+              "name" : "most_recent_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "TOTAL_ORDERS",
+              "name" : "total_orders",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_LIFETIME_VALUE",
+              "name" : "customer_lifetime_value",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -389,26 +389,26 @@
         "outputs" : [ {
           "id" : "KNjGt15l",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "PAYMENT_ID",
+              "name" : "payment_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "PAYMENT_METHOD",
+              "name" : "payment_method",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -478,19 +478,19 @@
         "inputs" : [ {
           "id" : "YgGVOukE",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
@@ -500,26 +500,26 @@
         }, {
           "id" : "Ph0evFIc",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_ORDER",
+              "name" : "first_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "MOST_RECENT_ORDER",
+              "name" : "most_recent_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "NUMBER_OF_ORDERS",
+              "name" : "number_of_orders",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             } ]
           },
@@ -527,16 +527,16 @@
         }, {
           "id" : "pHvpVHtf",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "TOTAL_AMOUNT",
+              "name" : "total_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -545,41 +545,41 @@
         "outputs" : [ {
           "id" : "e6And4zG",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "FIRST_ORDER",
+              "name" : "first_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "MOST_RECENT_ORDER",
+              "name" : "most_recent_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "TOTAL_ORDERS",
+              "name" : "total_orders",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_LIFETIME_VALUE",
+              "name" : "customer_lifetime_value",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -609,41 +609,41 @@
         "inputs" : [ {
           "id" : "iVitpXCi",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "FIRST_ORDER",
+              "name" : "first_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "MOST_RECENT_ORDER",
+              "name" : "most_recent_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "TOTAL_ORDERS",
+              "name" : "total_orders",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_LIFETIME_VALUE",
+              "name" : "customer_lifetime_value",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -652,41 +652,41 @@
         "outputs" : [ {
           "id" : "F500JoiY",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "first_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "last_name",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "FIRST_ORDER",
+              "name" : "first_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "MOST_RECENT_ORDER",
+              "name" : "most_recent_order",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "TOTAL_ORDERS",
+              "name" : "total_orders",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_LIFETIME_VALUE",
+              "name" : "customer_lifetime_value",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -730,16 +730,16 @@
         "inputs" : [ {
           "id" : "qHkrzaNa",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -748,16 +748,16 @@
         "outputs" : [ {
           "id" : "hIX5oaij",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "TOTAL_AMOUNT",
+              "name" : "total_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -784,24 +784,24 @@
         "outputs" : [ {
           "id" : "E9OOmJWR",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }

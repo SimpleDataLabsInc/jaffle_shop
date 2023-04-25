@@ -34,26 +34,26 @@
         "outputs" : [ {
           "id" : "zMwnKYds",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "PAYMENT_ID",
+              "name" : "payment_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "PAYMENT_METHOD",
+              "name" : "payment_method",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -111,26 +111,26 @@
         "inputs" : [ {
           "id" : "yQhFYyqi",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "PAYMENT_ID",
+              "name" : "payment_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "PAYMENT_METHOD",
+              "name" : "payment_method",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -139,36 +139,36 @@
         "outputs" : [ {
           "id" : "u8Bor8wu",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CREDIT_CARD_AMOUNT",
+              "name" : "credit_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "COUPON_AMOUNT",
+              "name" : "coupon_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "BANK_TRANSFER_AMOUNT",
+              "name" : "bank_transfer_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "GIFT_CARD_AMOUNT",
+              "name" : "gift_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "TOTAL_AMOUNT",
+              "name" : "total_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -195,24 +195,24 @@
         "outputs" : [ {
           "id" : "CCxuaRZR",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }
@@ -285,24 +285,24 @@
         "inputs" : [ {
           "id" : "XdesD70c",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }
@@ -312,36 +312,36 @@
         }, {
           "id" : "X4fSE3ze",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CREDIT_CARD_AMOUNT",
+              "name" : "credit_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "COUPON_AMOUNT",
+              "name" : "coupon_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "BANK_TRANSFER_AMOUNT",
+              "name" : "bank_transfer_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "GIFT_CARD_AMOUNT",
+              "name" : "gift_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "TOTAL_AMOUNT",
+              "name" : "total_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -350,51 +350,51 @@
         "outputs" : [ {
           "id" : "eYlflJ5k",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "CREDIT_CARD_AMOUNT",
+              "name" : "credit_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "COUPON_AMOUNT",
+              "name" : "coupon_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "BANK_TRANSFER_AMOUNT",
+              "name" : "bank_transfer_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "GIFT_CARD_AMOUNT",
+              "name" : "gift_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -425,51 +425,51 @@
         "inputs" : [ {
           "id" : "DwiHZdIR",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "CREDIT_CARD_AMOUNT",
+              "name" : "credit_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "COUPON_AMOUNT",
+              "name" : "coupon_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "BANK_TRANSFER_AMOUNT",
+              "name" : "bank_transfer_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "GIFT_CARD_AMOUNT",
+              "name" : "gift_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
@@ -478,51 +478,51 @@
         "outputs" : [ {
           "id" : "qK8xaSfN",
           "schema" : {
-            "providerType" : "Snowflake",
+            "providerType" : "BigQuery",
             "fields" : [ {
-              "name" : "ORDER_ID",
+              "name" : "order_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "CUSTOMER_ID",
+              "name" : "customer_id",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Integer"
               }
             }, {
-              "name" : "ORDER_DATE",
+              "name" : "order_date",
               "dataType" : {
                 "type" : "Date"
               }
             }, {
-              "name" : "STATUS",
+              "name" : "status",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "CREDIT_CARD_AMOUNT",
+              "name" : "credit_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "COUPON_AMOUNT",
+              "name" : "coupon_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "BANK_TRANSFER_AMOUNT",
+              "name" : "bank_transfer_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "GIFT_CARD_AMOUNT",
+              "name" : "gift_card_amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             }, {
-              "name" : "AMOUNT",
+              "name" : "amount",
               "dataType" : {
-                "type" : "Number"
+                "type" : "Float"
               }
             } ]
           },
