@@ -32,3 +32,61 @@ sources:
     - name: "status"
       dataType:
         type: "String"
+- name: "prophecy_dataset_samples.tests"
+  database: "prophecy_dataset_samples"
+  schema: "tests"
+  config:
+    enabled: true
+  tables:
+  - name: "customers"
+    columns:
+    - name: "customer_id"
+      dataType:
+        type: "Integer"
+    - name: "first_name"
+      dataType:
+        type: "String"
+    - name: "last_name"
+      dataType:
+        type: "String"
+    - name: "first_order"
+      dataType:
+        type: "Date"
+    - name: "most_recent_order"
+      dataType:
+        type: "Date"
+    - name: "total_orders"
+      dataType:
+        type: "Bigint"
+    - name: "customer_lifetime_value"
+      dataType:
+        type: "Bigint"
+  - name: "orders"
+    columns:
+    - name: "order_id"
+      dataType:
+        type: "Integer"
+    - name: "customer_id"
+      dataType:
+        type: "Integer"
+    - name: "order_date"
+      dataType:
+        type: "Date"
+    - name: "status"
+      dataType:
+        type: "String"
+    - name: "credit_card_amount"
+      dataType:
+        type: "Bigint"
+    - name: "coupon_amount"
+      dataType:
+        type: "Bigint"
+    - name: "bank_transfer_amount"
+      dataType:
+        type: "Bigint"
+    - name: "gift_card_amount"
+      dataType:
+        type: "Bigint"
+    - name: "amount"
+      dataType:
+        type: "Bigint"
