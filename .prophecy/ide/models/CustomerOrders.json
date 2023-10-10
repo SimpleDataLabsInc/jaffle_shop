@@ -91,7 +91,8 @@
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "revenue_by_customer##fnwFzn8c" : {
@@ -210,7 +211,8 @@
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "orders##kXAVwWFM" : {
@@ -283,7 +285,8 @@
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "customer_order_amount##fayLvz7p" : {
@@ -472,7 +475,8 @@
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "top_5##Fmql55Wv" : {
@@ -546,7 +550,8 @@
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "customers##loPELNAU" : {
@@ -609,7 +614,8 @@
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "revenue_desc##ibHxXLRN" : {
@@ -689,7 +695,8 @@
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     }
   },
