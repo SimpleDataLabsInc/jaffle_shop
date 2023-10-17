@@ -9,10 +9,13 @@ pipelines: {}
 datasets: {}
 templates: {}
 jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
 functions:
   author: null
   createdAt: '2023-04-12 15:34:56'
-  gems: {}
   udfs: {}
   udafs: {}
   expressions: {}
@@ -207,7 +210,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_customers:
     name: raw_customers
     schema:
-      providerType: BigQuery
+      providerType: Databricks
       fields:
       - name: id
         dataType:
@@ -226,7 +229,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
     schema:
-      providerType: BigQuery
+      providerType: Databricks
       fields:
       - name: id
         dataType:
@@ -248,7 +251,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_payments:
     name: raw_payments
     schema:
-      providerType: BigQuery
+      providerType: Databricks
       fields:
       - name: id
         dataType:
