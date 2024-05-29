@@ -34,6 +34,10 @@ target-path: "target"
 # ==================
 models:
   jaffle_shop:
-    materialized: "table"
     staging:
       materialized: "view"
+
+# ============
+# Misc
+# ============
+dispatch: []
