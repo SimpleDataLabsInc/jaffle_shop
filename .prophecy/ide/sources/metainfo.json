@@ -7,8 +7,8 @@
     "path" : "",
     "editable" : true
   },
-  "providerType" : "databricks",
-  "fabricId" : "2623",
+  "providerType" : "snowflake",
+  "fabricId" : "13241",
   "prophecyIDEFolder" : {
     "name" : "",
     "children" : { },
@@ -19,76 +19,148 @@
     "type" : "Project",
     "name" : "",
     "children" : [ {
-      "type" : "Catalog",
-      "name" : "apollo11",
+      "type" : "Database",
+      "name" : "ANYA",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "dais2023",
+      "type" : "Database",
+      "name" : "ASHISH",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "dais_gen_ai",
+      "type" : "Database",
+      "name" : "BLACKROCK",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "data_engg",
+      "type" : "Database",
+      "name" : "BOBW",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "fsidemos",
+      "type" : "Database",
+      "name" : "CHETAN",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "gen_ai",
+      "type" : "Database",
+      "name" : "DOCS_ANALYTICS",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "hive_metastore",
+      "type" : "Database",
+      "name" : "DOCS_RAW",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "lineage_data",
+      "type" : "Database",
+      "name" : "EX1_GOR_X",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "main",
+      "type" : "Database",
+      "name" : "EX1_GOR_Y",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "ntong",
-      "children" : [ {
-        "type" : "Schema",
-        "name" : "default",
-        "children" : [ ]
-      }, {
-        "type" : "Schema",
-        "name" : "information_schema",
-        "children" : [ ]
-      } ]
-    }, {
-      "type" : "Catalog",
-      "name" : "ntong2",
+      "type" : "Database",
+      "name" : "FINANCIAL__ECONOMIC_ESSENTIALS",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "ntong_dais",
+      "type" : "Database",
+      "name" : "JAFFLE_SHOP",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "prophecy_data",
+      "type" : "Database",
+      "name" : "JAFFLE_SHOP_VLAUNIR",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "rj",
+      "type" : "Database",
+      "name" : "JASVINDER",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "samples",
+      "type" : "Database",
+      "name" : "JSR",
       "children" : [ ]
     }, {
-      "type" : "Catalog",
-      "name" : "system",
+      "type" : "Database",
+      "name" : "KEERTHI",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "KISHORE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "LOUIS",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "MACIEJ",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "MEITEST",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "NTONG",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "POOJA",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "QA_COPILOT",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "QA_DATABASE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "QA_UPLOAD_TABLES",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "RAJ",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "RAJAT",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "RJ",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SHASHANK",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SNOWFLAKE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SNOWFLAKE_SAMPLE_DATA",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "TESTING",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "UT_DB_DONOT_USE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "VLAUNIR_DB",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "\"jaffle_shop\"",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "\"qa_database\"",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "\"qa_database_lower_case_only\"",
       "children" : [ ]
     } ]
   },
@@ -96,5 +168,6 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : { }
   },
+  "sourcesToSync" : [ ],
   "frontEndLanguage" : "sql"
 }

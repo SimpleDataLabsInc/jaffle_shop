@@ -2,7 +2,7 @@
   "id" : "stg_payments",
   "metainfo" : {
     "label" : "stg_payments",
-    "autoLayout" : false,
+    "autoLayout" : true,
     "staleState" : "none",
     "sourceSuggestions" : {
       "sources" : [ ]
@@ -11,18 +11,17 @@
       "userDefinedConfig" : {
         "vars" : { }
       }
-    }
+    },
+    "version" : 3
   },
   "processes" : {
-    "source##VxMIf8UY" : {
-      "id" : "source##VxMIf8UY",
+    "source##vuqX2xr9" : {
+      "id" : "source##vuqX2xr9",
       "component" : "Seed",
       "metadata" : {
         "label" : "source",
-        "x" : 120,
-        "y" : 120,
         "phase" : 0,
-        "comment" : "-\n    Normally we would select from the table here, but we are using seeds to load\n    our data in this project\n    "
+        "comment" : "-\n  Normally we would select from the table here, but we are using seeds to load\n  our data in this project\n  "
       },
       "properties" : {
         "table" : {
@@ -33,18 +32,18 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "H3CHWbml",
+          "id" : "h7ohbJe9",
           "schema" : {
-            "providerType" : "Databricks",
+            "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "id",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
               "name" : "order_id",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
               "name" : "payment_method",
@@ -54,27 +53,26 @@
             }, {
               "name" : "amount",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             } ]
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
-    "renamed##j3c1ViVR" : {
-      "id" : "renamed##j3c1ViVR",
+    "renamed##FXAOH1Ua" : {
+      "id" : "renamed##FXAOH1Ua",
       "component" : "Reformat",
       "metadata" : {
         "label" : "renamed",
-        "x" : 320,
-        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ "KPqq9NOM##id", "KPqq9NOM##order_id", "KPqq9NOM##payment_method" ],
+        "columnsSelector" : [ "s8QgNlso##id", "s8QgNlso##order_id", "s8QgNlso##payment_method", "s8QgNlso##amount" ],
         "expressions" : [ {
           "expression" : {
             "expression" : "id"
@@ -97,18 +95,18 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "KPqq9NOM",
+          "id" : "s8QgNlso",
           "schema" : {
-            "providerType" : "Databricks",
+            "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "id",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
               "name" : "order_id",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
               "name" : "payment_method",
@@ -118,50 +116,49 @@
             }, {
               "name" : "amount",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             } ]
           },
           "slug" : "source"
         } ],
         "outputs" : [ {
-          "id" : "JJn4ajlb",
+          "id" : "pbgygWc2",
           "schema" : {
-            "providerType" : "Databricks",
+            "providerType" : "Snowflake",
             "fields" : [ {
-              "name" : "payment_id",
+              "name" : "PAYMENT_ID",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
-              "name" : "order_id",
+              "name" : "ORDER_ID",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
-              "name" : "payment_method",
+              "name" : "PAYMENT_METHOD",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "amount",
+              "name" : "AMOUNT",
               "dataType" : {
-                "type" : "Double"
+                "type" : "Number"
               }
             } ]
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
-    "stg_payments##PMerBwCO" : {
-      "id" : "stg_payments##PMerBwCO",
+    "stg_payments##r7eA6K5y" : {
+      "id" : "stg_payments##r7eA6K5y",
       "component" : "TargetModel",
       "metadata" : {
         "label" : "stg_payments",
-        "x" : 520,
-        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -177,77 +174,78 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "QFoHKIHO",
+          "id" : "FFtXoeH8",
           "schema" : {
-            "providerType" : "Databricks",
+            "providerType" : "Snowflake",
             "fields" : [ {
-              "name" : "payment_id",
+              "name" : "PAYMENT_ID",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
-              "name" : "order_id",
+              "name" : "ORDER_ID",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
-              "name" : "payment_method",
+              "name" : "PAYMENT_METHOD",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "amount",
+              "name" : "AMOUNT",
               "dataType" : {
-                "type" : "Double"
+                "type" : "Number"
               }
             } ]
           },
           "slug" : "renamed"
         } ],
         "outputs" : [ {
-          "id" : "chtHMDum",
+          "id" : "bgxb8uzn",
           "schema" : {
-            "providerType" : "Databricks",
+            "providerType" : "Snowflake",
             "fields" : [ {
-              "name" : "payment_id",
+              "name" : "PAYMENT_ID",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
-              "name" : "order_id",
+              "name" : "ORDER_ID",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Number"
               }
             }, {
-              "name" : "payment_method",
+              "name" : "PAYMENT_METHOD",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "amount",
+              "name" : "AMOUNT",
               "dataType" : {
-                "type" : "Double"
+                "type" : "Number"
               }
             } ]
           },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     }
   },
   "connections" : [ {
-    "id" : "pyg1teRL",
-    "source" : "source##VxMIf8UY",
-    "sourcePort" : "H3CHWbml",
-    "target" : "renamed##j3c1ViVR",
-    "targetPort" : "KPqq9NOM"
+    "id" : "Og0fVYGU",
+    "source" : "source##vuqX2xr9",
+    "sourcePort" : "h7ohbJe9",
+    "target" : "renamed##FXAOH1Ua",
+    "targetPort" : "s8QgNlso"
   }, {
-    "id" : "Wt6uHrWy",
-    "source" : "renamed##j3c1ViVR",
-    "sourcePort" : "JJn4ajlb",
-    "target" : "stg_payments##PMerBwCO",
-    "targetPort" : "QFoHKIHO"
+    "id" : "CYNmhXIJ",
+    "source" : "renamed##FXAOH1Ua",
+    "sourcePort" : "pbgygWc2",
+    "target" : "stg_payments##r7eA6K5y",
+    "targetPort" : "FFtXoeH8"
   } ],
   "component" : "Model"
 }

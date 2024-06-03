@@ -25,7 +25,21 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/stg_orders:
     name: stg_orders
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_DATE
+        dataType:
+          type: Date
+      - name: STATUS
+        dataType:
+          type: String
     description: null
     author: maciej@prophecy.io
     files:
@@ -35,22 +49,74 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/CustomerOrders:
     name: CustomerOrders
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+      - name: ORDER_COUNT
+        dataType:
+          type: Number
+      - name: TOTAL_REVENUE
+        dataType:
+          type: Number
     description: null
-    author: nathan@prophecy.io
+    author: nathan+demo@prophecy.io
     files:
     - models/CustomerOrders.sql
     - .prophecy/ide/models/CustomerOrders.json
     sqlDependencies:
       models: []
       datasets: []
-    createdAt: '2023-08-02 18:29:07'
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-03 17:11:51'
   .prophecy/metadata/sqlmodels/orders:
     name: orders
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_DATE
+        dataType:
+          type: Date
+      - name: STATUS
+        dataType:
+          type: String
+      - name: CREDIT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: COUPON_AMOUNT
+        dataType:
+          type: Number
+      - name: BANK_TRANSFER_AMOUNT
+        dataType:
+          type: Number
+      - name: GIFT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: AMOUNT
+        dataType:
+          type: Number
     description: This table has basic information about orders, as well as some derived
       facts based on payments
     author: maciej@prophecy.io
@@ -61,10 +127,36 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/customers:
     name: customers
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+      - name: FIRST_ORDER
+        dataType:
+          type: Date
+      - name: MOST_RECENT_ORDER
+        dataType:
+          type: Date
+      - name: TOTAL_ORDERS
+        dataType:
+          type: Number
+      - name: CUSTOMER_LIFETIME_VALUE
+        dataType:
+          type: Number
     description: This table has basic information about a customer, as well as some
       derived facts based on a customer's orders
     author: maciej@prophecy.io
@@ -75,10 +167,27 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/stg_payments:
     name: stg_payments
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: PAYMENT_ID
+        dataType:
+          type: Number
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: PAYMENT_METHOD
+        dataType:
+          type: String
+      - name: AMOUNT
+        dataType:
+          type: Number
     description: null
     author: maciej@prophecy.io
     files:
@@ -88,10 +197,24 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/stg_customers:
     name: stg_customers
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
     description: null
     author: maciej@prophecy.io
     files:
@@ -101,17 +224,22 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-04-12 15:35:01'
+sqlSnapshots: {}
+sqlTests: {}
 sqlMacros: {}
 sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_customers:
     name: raw_customers
     schema:
-      providerType: Databricks
+      providerType: Snowflake
       fields:
       - name: id
         dataType:
-          type: Integer
+          type: Number
       - name: first_name
         dataType:
           type: String
@@ -126,14 +254,14 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
     schema:
-      providerType: Databricks
+      providerType: Snowflake
       fields:
       - name: id
         dataType:
-          type: Integer
+          type: Number
       - name: user_id
         dataType:
-          type: Integer
+          type: Number
       - name: order_date
         dataType:
           type: Date
@@ -148,20 +276,20 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_payments:
     name: raw_payments
     schema:
-      providerType: Databricks
+      providerType: Snowflake
       fields:
       - name: id
         dataType:
-          type: Integer
+          type: Number
       - name: order_id
         dataType:
-          type: Integer
+          type: Number
       - name: payment_method
         dataType:
           type: String
       - name: amount
         dataType:
-          type: Integer
+          type: Number
     description: null
     author: maciej@prophecy.io
     files:

@@ -10,6 +10,7 @@ WITH payments AS (
 
 order_payments AS (
 
+  {#Calculates payment amounts for each order, categorized by different payment methods, and computes the total payment amount.#}
   SELECT 
     order_id,
     {% for payment_method in payment_methods %}

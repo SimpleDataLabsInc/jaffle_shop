@@ -14,57 +14,50 @@ orders AS (
 
 ),
 
-customer_order_amount AS (
+join_customers_orders AS (
 
+  {#Combines customer and order information, including the full name of each customer.#}
   SELECT 
-    customers.customer_id AS customer_id,
-    customers.first_name AS first_name,
-    customers.last_name AS last_name,
-    orders.amount,
-    CONCAT(first_name, ' ', last_name) AS full_name,
-    DATEDIFF(DAY, first_order, CURRENT_DATE) AS account_length_day
+    customers.CUSTOMER_ID,
+    customers.FIRST_NAME,
+    customers.LAST_NAME,
+    orders.ORDER_ID,
+    orders.AMOUNT,
+    CONCAT(customers.FIRST_NAME, ' ', customers.LAST_NAME) AS full_name
   
   FROM customers
   INNER JOIN orders
-     ON customers.customer_id = orders.customer_id
+     ON customers.CUSTOMER_ID = orders.CUSTOMER_ID
 
 ),
 
-revenue_by_customer AS (
+customer_order_summary AS (
 
   SELECT 
-    customer_id,
-    first_name,
-    last_name,
-    sum(amount) AS revenue
+    CUSTOMER_ID,
+    FIRST_NAME,
+    LAST_NAME,
+    COUNT(ORDER_ID) AS ORDER_COUNT,
+    SUM(AMOUNT) AS TOTAL_REVENUE
   
-  FROM customer_order_amount
+  FROM join_customers_orders
   
   GROUP BY 
-    customer_id, first_name, last_name
+    CUSTOMER_ID, FIRST_NAME, LAST_NAME
 
 ),
 
-revenue_desc AS (
+OrderBy_1 AS (
 
+  {#Sorts customer order summary in descending order based on total revenue.#}
   SELECT * 
   
-  FROM revenue_by_customer
+  FROM customer_order_summary
   
-  ORDER BY revenue DESC NULLS FIRST
-
-),
-
-top_5 AS (
-
-  SELECT * 
-  
-  FROM revenue_desc
-  
-  LIMIT 5
+  ORDER BY TOTAL_REVENUE DESC
 
 )
 
 SELECT *
 
-FROM top_5
+FROM OrderBy_1
