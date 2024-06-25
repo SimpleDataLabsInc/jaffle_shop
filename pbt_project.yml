@@ -128,7 +128,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_customers:
     name: raw_customers
     schema:
-      providerType: Redshift
+      providerType: BigQuery
       fields:
       - name: id
         dataType:
@@ -147,7 +147,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
     schema:
-      providerType: Redshift
+      providerType: BigQuery
       fields:
       - name: id
         dataType:
@@ -169,7 +169,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_payments:
     name: raw_payments
     schema:
-      providerType: Redshift
+      providerType: BigQuery
       fields:
       - name: id
         dataType:
