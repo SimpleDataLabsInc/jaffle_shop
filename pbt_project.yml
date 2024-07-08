@@ -21,6 +21,7 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
+  businessRules: {}
 subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/stg_orders:
@@ -99,29 +100,6 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2023-04-12 15:35:01'
-  .prophecy/metadata/sqlmodels/customers_orders:
-    name: customers_orders
-    schema:
-      providerType: Databricks
-      fields:
-      - name: CUSTOMER_ID
-        dataType:
-          type: Integer
-      - name: TOTAL_AMOUNT
-        dataType:
-          type: Double
-    description: null
-    author: maciej+demo7@prophecy.io
-    files:
-    - models/customers_orders.sql
-    - .prophecy/ide/models/customers_orders.json
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2024-05-29 16:02:45'
   .prophecy/metadata/sqlmodels/customers:
     name: customers
     schema:
