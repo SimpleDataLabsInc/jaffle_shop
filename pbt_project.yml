@@ -27,6 +27,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/stg_orders:
     name: stg_orders
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: ORDER_ID
@@ -57,6 +58,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/CustomerOrders:
     name: CustomerOrders
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: CUSTOMER_ID
@@ -89,6 +91,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/orders:
     name: orders
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: ORDER_ID
@@ -135,6 +138,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/customers:
     name: customers
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: CUSTOMER_ID
@@ -175,6 +179,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/stg_payments:
     name: stg_payments
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: PAYMENT_ID
@@ -205,6 +210,7 @@ sqlModels:
   .prophecy/metadata/sqlmodels/stg_customers:
     name: stg_customers
     schema:
+      entityType: ''
       providerType: Snowflake
       fields:
       - name: CUSTOMER_ID
@@ -236,11 +242,12 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_customers:
     name: raw_customers
     schema:
-      providerType: Snowflake
+      entityType: ''
+      providerType: Databricks
       fields:
       - name: id
         dataType:
-          type: Number
+          type: Integer
       - name: first_name
         dataType:
           type: String
@@ -255,14 +262,15 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
     schema:
-      providerType: Snowflake
+      entityType: ''
+      providerType: Databricks
       fields:
       - name: id
         dataType:
-          type: Number
+          type: Integer
       - name: user_id
         dataType:
-          type: Number
+          type: Integer
       - name: order_date
         dataType:
           type: Date
@@ -277,20 +285,21 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_payments:
     name: raw_payments
     schema:
-      providerType: Snowflake
+      entityType: ''
+      providerType: Databricks
       fields:
       - name: id
         dataType:
-          type: Number
+          type: Integer
       - name: order_id
         dataType:
-          type: Number
+          type: Integer
       - name: payment_method
         dataType:
           type: String
       - name: amount
         dataType:
-          type: Number
+          type: Integer
     description: null
     author: maciej@prophecy.io
     files:
