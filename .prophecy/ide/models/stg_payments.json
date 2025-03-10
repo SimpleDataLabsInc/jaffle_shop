@@ -2,7 +2,7 @@
   "id" : "stg_payments",
   "metainfo" : {
     "label" : "stg_payments",
-    "autoLayout" : false,
+    "autoLayout" : true,
     "staleState" : "none",
     "sourceSuggestions" : {
       "sources" : [ ]
@@ -11,18 +11,17 @@
       "userDefinedConfig" : {
         "vars" : { }
       }
-    }
+    },
+    "version" : 3
   },
   "processes" : {
-    "source##VxMIf8UY" : {
-      "id" : "source##VxMIf8UY",
+    "source##Rf1PVf89" : {
+      "id" : "source##Rf1PVf89",
       "component" : "Seed",
       "metadata" : {
         "label" : "source",
-        "x" : 120,
-        "y" : 120,
         "phase" : 0,
-        "comment" : "-\n    Normally we would select from the table here, but we are using seeds to load\n    our data in this project\n    "
+        "comment" : "-\n  Normally we would select from the table here, but we are using seeds to load\n  our data in this project\n  "
       },
       "properties" : {
         "table" : {
@@ -33,48 +32,23 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "H3CHWbml",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "payment_method",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            } ]
-          },
+          "id" : "vRXPvkw5",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
-    "renamed##j3c1ViVR" : {
-      "id" : "renamed##j3c1ViVR",
+    "renamed##W40RPhlQ" : {
+      "id" : "renamed##W40RPhlQ",
       "component" : "Reformat",
       "metadata" : {
         "label" : "renamed",
-        "x" : 320,
-        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ "KPqq9NOM##id", "KPqq9NOM##order_id", "KPqq9NOM##payment_method" ],
+        "columnsSelector" : [ "Z9GhYNy9##id", "Z9GhYNy9##order_id", "Z9GhYNy9##payment_method", "Z9GhYNy9##amount" ],
         "expressions" : [ {
           "expression" : {
             "expression" : "id"
@@ -97,71 +71,22 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "KPqq9NOM",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "payment_method",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            } ]
-          },
+          "id" : "Z9GhYNy9",
           "slug" : "source"
         } ],
         "outputs" : [ {
-          "id" : "JJn4ajlb",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "payment_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "payment_method",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Double"
-              }
-            } ]
-          },
+          "id" : "Sf956oJC",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
-    "stg_payments##PMerBwCO" : {
-      "id" : "stg_payments##PMerBwCO",
+    "stg_payments##B3ZJrs1X" : {
+      "id" : "stg_payments##B3ZJrs1X",
       "component" : "TargetModel",
       "metadata" : {
         "label" : "stg_payments",
-        "x" : 520,
-        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -177,77 +102,30 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "QFoHKIHO",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "payment_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "payment_method",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Double"
-              }
-            } ]
-          },
+          "id" : "MKNxzkVI",
           "slug" : "renamed"
         } ],
         "outputs" : [ {
-          "id" : "chtHMDum",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "payment_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "payment_method",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Double"
-              }
-            } ]
-          },
+          "id" : "T4EMgAWq",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     }
   },
   "connections" : [ {
-    "id" : "pyg1teRL",
-    "source" : "source##VxMIf8UY",
-    "sourcePort" : "H3CHWbml",
-    "target" : "renamed##j3c1ViVR",
-    "targetPort" : "KPqq9NOM"
+    "id" : "msBgaObE",
+    "source" : "source##Rf1PVf89",
+    "sourcePort" : "vRXPvkw5",
+    "target" : "renamed##W40RPhlQ",
+    "targetPort" : "Z9GhYNy9"
   }, {
-    "id" : "Wt6uHrWy",
-    "source" : "renamed##j3c1ViVR",
-    "sourcePort" : "JJn4ajlb",
-    "target" : "stg_payments##PMerBwCO",
-    "targetPort" : "QFoHKIHO"
+    "id" : "Osvlo4gQ",
+    "source" : "renamed##W40RPhlQ",
+    "sourcePort" : "Sf956oJC",
+    "target" : "stg_payments##B3ZJrs1X",
+    "targetPort" : "MKNxzkVI"
   } ],
   "component" : "Model"
 }

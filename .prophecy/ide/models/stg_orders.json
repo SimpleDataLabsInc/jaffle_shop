@@ -2,7 +2,7 @@
   "id" : "stg_orders",
   "metainfo" : {
     "label" : "stg_orders",
-    "autoLayout" : true,
+    "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
       "sources" : [ ]
@@ -11,14 +11,17 @@
       "userDefinedConfig" : {
         "vars" : { }
       }
-    }
+    },
+    "version" : 3
   },
   "processes" : {
-    "source##h8aWlF4M" : {
-      "id" : "source##h8aWlF4M",
+    "source##y3flVrSD" : {
+      "id" : "source##y3flVrSD",
       "component" : "Seed",
       "metadata" : {
         "label" : "source",
+        "x" : 20,
+        "y" : 20,
         "phase" : 0,
         "comment" : "-\n    Normally we would select from the table here, but we are using seeds to load\n    our data in this project\n    "
       },
@@ -31,46 +34,25 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "Abj9b1Az",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "user_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
+          "id" : "OefhPZNX",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
-    "renamed##P1cMSKwU" : {
-      "id" : "renamed##P1cMSKwU",
+    "renamed##XXPCquPC" : {
+      "id" : "renamed##XXPCquPC",
       "component" : "Reformat",
       "metadata" : {
         "label" : "renamed",
+        "x" : 220,
+        "y" : 20,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ "XCch4FYH##id", "XCch4FYH##user_id", "XCch4FYH##order_date", "XCch4FYH##status" ],
+        "columnsSelector" : [ "qgubrAB0##id", "qgubrAB0##user_id", "qgubrAB0##order_date", "qgubrAB0##status" ],
         "expressions" : [ {
           "expression" : {
             "expression" : "id"
@@ -93,69 +75,24 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "XCch4FYH",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "user_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
+          "id" : "qgubrAB0",
           "slug" : "source"
         } ],
         "outputs" : [ {
-          "id" : "J3jLWm3v",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
+          "id" : "Ka51KKCG",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
-    "stg_orders##zkDy5rYj" : {
-      "id" : "stg_orders##zkDy5rYj",
+    "stg_orders##vmzFqxCb" : {
+      "id" : "stg_orders##vmzFqxCb",
       "component" : "TargetModel",
       "metadata" : {
         "label" : "stg_orders",
+        "x" : 420,
+        "y" : 20,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -171,77 +108,30 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "XRJg3GT5",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
+          "id" : "awbj6Ppm",
           "slug" : "renamed"
         } ],
         "outputs" : [ {
-          "id" : "We3TTUev",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "status",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
+          "id" : "M7UCPJM4",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     }
   },
   "connections" : [ {
-    "id" : "HH9Qtnyo",
-    "source" : "source##h8aWlF4M",
-    "sourcePort" : "Abj9b1Az",
-    "target" : "renamed##P1cMSKwU",
-    "targetPort" : "XCch4FYH"
+    "id" : "BNpVeZ2B",
+    "source" : "source##y3flVrSD",
+    "sourcePort" : "OefhPZNX",
+    "target" : "renamed##XXPCquPC",
+    "targetPort" : "qgubrAB0"
   }, {
-    "id" : "GGIAH0Bu",
-    "source" : "renamed##P1cMSKwU",
-    "sourcePort" : "J3jLWm3v",
-    "target" : "stg_orders##zkDy5rYj",
-    "targetPort" : "XRJg3GT5"
+    "id" : "UyArNC6Y",
+    "source" : "renamed##XXPCquPC",
+    "sourcePort" : "Ka51KKCG",
+    "target" : "stg_orders##vmzFqxCb",
+    "targetPort" : "awbj6Ppm"
   } ],
   "component" : "Model"
 }

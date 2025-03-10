@@ -1,5 +1,6 @@
 WITH customers AS (
 
+  {#Retrieves the complete list of customers for analysis.#}
   SELECT * 
   
   FROM {{ ref('customers')}}
@@ -8,63 +9,69 @@ WITH customers AS (
 
 orders AS (
 
+  {#Retrieves all order records for comprehensive analysis.#}
   SELECT * 
   
   FROM {{ ref('orders')}}
 
 ),
 
-customer_order_amount AS (
+customer_order_details AS (
 
+  {#Compiles detailed order information along with customer names for better insights into customer spending.#}
   SELECT 
-    customers.customer_id AS customer_id,
-    customers.first_name AS first_name,
-    customers.last_name AS last_name,
-    orders.amount,
-    CONCAT(first_name, ' ', last_name) AS full_name,
-    DATEDIFF(DAY, first_order, CURRENT_DATE) AS account_length_day
+    customers.CUSTOMER_ID,
+    customers.FIRST_NAME,
+    customers.LAST_NAME,
+    CONCAT(customers.FIRST_NAME, ' ', customers.LAST_NAME) AS FULL_NAME,
+    orders.AMOUNT,
+    orders.ORDER_ID
   
   FROM customers
   INNER JOIN orders
-     ON customers.customer_id = orders.customer_id
+     ON customers.CUSTOMER_ID = orders.CUSTOMER_ID
 
 ),
 
 revenue_by_customer AS (
 
+  {#Calculates total revenue and order count for each customer.#}
   SELECT 
-    customer_id,
-    first_name,
-    last_name,
-    sum(amount) AS revenue
+    CUSTOMER_ID,
+    FIRST_NAME,
+    LAST_NAME,
+    SUM(AMOUNT) AS TOTAL_REVENUE,
+    COUNT(ORDER_ID) AS ORDER_COUNT
   
-  FROM customer_order_amount
+  FROM customer_order_details
   
   GROUP BY 
-    customer_id, first_name, last_name
+    CUSTOMER_ID, FIRST_NAME, LAST_NAME
 
 ),
 
-revenue_desc AS (
+revenue_order_summary AS (
 
+  {#Ranks customers based on total revenue and order count for better sales insights.#}
   SELECT * 
   
   FROM revenue_by_customer
   
-  ORDER BY revenue DESC NULLS FIRST
+  ORDER BY TOTAL_REVENUE DESC, ORDER_COUNT DESC
 
 ),
 
-top_5 AS (
+top_10_rows AS (
 
+  {#Identifies the top 10 revenue-generating orders for performance evaluation.#}
   SELECT * 
   
-  FROM revenue_desc
+  FROM revenue_order_summary
   
-  LIMIT 5
+  FETCH NEXT 10 ROWS ONLY
 
 )
 
 SELECT *
 
-FROM top_5
+FROM top_10_rows
