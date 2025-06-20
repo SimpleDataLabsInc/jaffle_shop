@@ -26,22 +26,7 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/stg_orders:
     name: stg_orders
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: ORDER_ID
-        dataType:
-          type: Number
-      - name: CUSTOMER_ID
-        dataType:
-          type: Number
-      - name: ORDER_DATE
-        dataType:
-          type: Date
-      - name: STATUS
-        dataType:
-          type: String
+    schema: null
     description: null
     author: maciej@prophecy.io
     files:
@@ -57,25 +42,7 @@ sqlModels:
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/CustomerOrders:
     name: CustomerOrders
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: CUSTOMER_ID
-        dataType:
-          type: Number
-      - name: FIRST_NAME
-        dataType:
-          type: String
-      - name: LAST_NAME
-        dataType:
-          type: String
-      - name: TOTAL_REVENUE
-        dataType:
-          type: Number
-      - name: ORDER_COUNT
-        dataType:
-          type: Number
+    schema: null
     description: Identifies top 10 customers based on total revenue generated from
       their orders. It aggregates order amounts and counts for each customer, providing
       a summary of revenue contributions.
@@ -93,37 +60,7 @@ sqlModels:
     createdAt: '2025-03-10 15:48:49'
   .prophecy/metadata/sqlmodels/orders:
     name: orders
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: ORDER_ID
-        dataType:
-          type: Number
-      - name: CUSTOMER_ID
-        dataType:
-          type: Number
-      - name: ORDER_DATE
-        dataType:
-          type: Date
-      - name: STATUS
-        dataType:
-          type: String
-      - name: CREDIT_CARD_AMOUNT
-        dataType:
-          type: Number
-      - name: COUPON_AMOUNT
-        dataType:
-          type: Number
-      - name: BANK_TRANSFER_AMOUNT
-        dataType:
-          type: Number
-      - name: GIFT_CARD_AMOUNT
-        dataType:
-          type: Number
-      - name: AMOUNT
-        dataType:
-          type: Number
+    schema: null
     description: This table has basic information about orders, as well as some derived
       facts based on payments
     author: maciej@prophecy.io
@@ -140,31 +77,7 @@ sqlModels:
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/customers:
     name: customers
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: CUSTOMER_ID
-        dataType:
-          type: Number
-      - name: FIRST_NAME
-        dataType:
-          type: String
-      - name: LAST_NAME
-        dataType:
-          type: String
-      - name: FIRST_ORDER
-        dataType:
-          type: Date
-      - name: MOST_RECENT_ORDER
-        dataType:
-          type: Date
-      - name: TOTAL_ORDERS
-        dataType:
-          type: Number
-      - name: CUSTOMER_LIFETIME_VALUE
-        dataType:
-          type: Number
+    schema: null
     description: This table has basic information about a customer, as well as some
       derived facts based on a customer's orders
     author: maciej@prophecy.io
@@ -181,22 +94,7 @@ sqlModels:
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/stg_payments:
     name: stg_payments
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: PAYMENT_ID
-        dataType:
-          type: Number
-      - name: ORDER_ID
-        dataType:
-          type: Number
-      - name: PAYMENT_METHOD
-        dataType:
-          type: String
-      - name: AMOUNT
-        dataType:
-          type: Number
+    schema: null
     description: null
     author: maciej@prophecy.io
     files:
@@ -212,19 +110,7 @@ sqlModels:
     createdAt: '2023-04-12 15:35:01'
   .prophecy/metadata/sqlmodels/stg_customers:
     name: stg_customers
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: CUSTOMER_ID
-        dataType:
-          type: Number
-      - name: FIRST_NAME
-        dataType:
-          type: String
-      - name: LAST_NAME
-        dataType:
-          type: String
+    schema: null
     description: null
     author: maciej@prophecy.io
     files:
@@ -246,11 +132,11 @@ sqlSeeds:
     name: raw_customers
     schema:
       entityType: ''
-      providerType: Snowflake
+      providerType: BigQuery
       fields:
       - name: id
         dataType:
-          type: Number
+          type: Integer
       - name: first_name
         dataType:
           type: String
@@ -266,14 +152,14 @@ sqlSeeds:
     name: raw_orders
     schema:
       entityType: ''
-      providerType: Snowflake
+      providerType: BigQuery
       fields:
       - name: id
         dataType:
-          type: Number
+          type: Integer
       - name: user_id
         dataType:
-          type: Number
+          type: Integer
       - name: order_date
         dataType:
           type: Date
@@ -289,20 +175,20 @@ sqlSeeds:
     name: raw_payments
     schema:
       entityType: ''
-      providerType: Snowflake
+      providerType: BigQuery
       fields:
       - name: id
         dataType:
-          type: Number
+          type: Integer
       - name: order_id
         dataType:
-          type: Number
+          type: Integer
       - name: payment_method
         dataType:
           type: String
       - name: amount
         dataType:
-          type: Number
+          type: Integer
     description: null
     author: maciej@prophecy.io
     files:
