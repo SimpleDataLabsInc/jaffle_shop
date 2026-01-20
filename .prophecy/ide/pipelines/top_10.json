@@ -1,0 +1,84 @@
+{
+  "id" : "top_10",
+  "metainfo" : {
+    "label" : "top_10",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false
+  },
+  "processes" : {
+    "NLpger5WwVVF8ltIYxFzC" : {
+      "id" : "NLpger5WwVVF8ltIYxFzC",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "customers",
+        "x" : -420,
+        "y" : -280,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "customers",
+          "sourceType" : "Table",
+          "sourceName" : "danyelle.demo",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DWWm99eubYTsEma5KssD-",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "gE7JoBcA_0_stQESlALy7",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "pQJBk1gPEJSeGnD3sVtA_" : {
+      "id" : "pQJBk1gPEJSeGnD3sVtA_",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "orders_1",
+        "x" : -420,
+        "y" : -100,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "orders",
+          "sourceType" : "Table",
+          "sourceName" : "danyelle.demo",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pLX8_bHJ_s29UpLkwCQZ-",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "YO5Q_uVAhkVSl9QLMxROD",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

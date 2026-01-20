@@ -76,18 +76,12 @@ models:
     \ a summary of revenue contributions."
   columns:
   - name: "TOTAL_REVENUE"
-    dataType:
-      type: "Number"
   - name: "FIRST_NAME"
     dataType:
       type: "String"
   - name: "CUSTOMER_ID"
-    dataType:
-      type: "Number"
   - name: "LAST_NAME"
     dataType:
       type: "String"
   - name: "ORDER_COUNT"
-    dataType:
-      type: "Number"
   tests: []

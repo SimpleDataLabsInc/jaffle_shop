@@ -15,151 +15,8 @@
     "version" : 3
   },
   "processes" : {
-    "revenue_by_custo##ShW2oJvS" : {
-      "id" : "revenue_by_custo##ShW2oJvS",
-      "component" : "Aggregate",
-      "metadata" : {
-        "label" : "revenue_by_customer",
-        "x" : 420,
-        "y" : 120,
-        "phase" : 0,
-        "macroDependencies" : [ ],
-        "comment" : "Calculates total revenue and order count for each customer.",
-        "autoUpdateComment" : true,
-        "isLabelGrayed" : false
-      },
-      "properties" : {
-        "aggregate" : [ {
-          "expression" : {
-            "expression" : "CUSTOMER_ID"
-          },
-          "_row_id" : "1020455132"
-        }, {
-          "expression" : {
-            "expression" : "FIRST_NAME"
-          },
-          "_row_id" : "1226994629"
-        }, {
-          "expression" : {
-            "expression" : "LAST_NAME"
-          },
-          "_row_id" : "1682670309"
-        }, {
-          "expression" : {
-            "expression" : "SUM(AMOUNT)"
-          },
-          "alias" : "TOTAL_REVENUE",
-          "_row_id" : "448765741"
-        }, {
-          "expression" : {
-            "expression" : "COUNT(ORDER_ID)"
-          },
-          "alias" : "ORDER_COUNT",
-          "_row_id" : "219049678"
-        } ],
-        "allowSelection" : true,
-        "condition" : {
-          "expression" : ""
-        },
-        "activeTab" : "aggregate",
-        "columnsSelector" : [ "Hpyhm4yJ##CUSTOMER_ID", "Hpyhm4yJ##FIRST_NAME", "Hpyhm4yJ##LAST_NAME", "Hpyhm4yJ##AMOUNT", "Hpyhm4yJ##ORDER_ID" ],
-        "groupBy" : [ {
-          "expression" : {
-            "expression" : "CUSTOMER_ID"
-          },
-          "_row_id" : "1653074270"
-        }, {
-          "expression" : {
-            "expression" : "FIRST_NAME"
-          },
-          "_row_id" : "2055961650"
-        }, {
-          "expression" : {
-            "expression" : "LAST_NAME"
-          },
-          "_row_id" : "1217280986"
-        } ]
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "Hpyhm4yJ",
-          "slug" : "customer_order_details"
-        } ],
-        "outputs" : [ {
-          "id" : "Ryfz0NBa",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
-    "orders##KYsLceuc" : {
-      "id" : "orders##KYsLceuc",
-      "component" : "Model",
-      "metadata" : {
-        "label" : "orders",
-        "x" : 20,
-        "y" : 220,
-        "phase" : 0,
-        "comment" : "Retrieves all order records for comprehensive analysis.",
-        "autoUpdateComment" : true,
-        "isLabelGrayed" : false
-      },
-      "properties" : {
-        "table" : {
-          "name" : "orders",
-          "sourceType" : "Model"
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "rINhqJou",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "index" : 1
-    },
-    "final##cTFNvWUi" : {
-      "id" : "final##cTFNvWUi",
-      "component" : "TargetModel",
-      "metadata" : {
-        "label" : "CustomerOrders",
-        "x" : 1020,
-        "y" : 120,
-        "phase" : 0,
-        "macroDependencies" : [ ],
-        "comment" : "Retrieves the top 10 customer orders for focused analysis.",
-        "autoUpdateComment" : true,
-        "isLabelGrayed" : false
-      },
-      "properties" : {
-        "customQueryDisabled" : true,
-        "customQuery" : false,
-        "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM top_10_rows\n",
-        "incrementalKey" : false,
-        "incremental" : {
-          "expression" : "true"
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "idBchFOM",
-          "slug" : "top_10_rows"
-        } ],
-        "outputs" : [ {
-          "id" : "hh7hoBTo",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
-    "revenue_order_su##ZaOsRvcp" : {
-      "id" : "revenue_order_su##ZaOsRvcp",
+    "revenue_order_su##VEoBYtX1" : {
+      "id" : "revenue_order_su##VEoBYtX1",
       "component" : "OrderBy",
       "metadata" : {
         "label" : "revenue_order_summary",
@@ -168,11 +25,10 @@
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Ranks customers based on total revenue and order count for better sales insights.",
-        "autoUpdateComment" : true,
         "isLabelGrayed" : false
       },
       "properties" : {
-        "columnsSelector" : [ "vPvdYKD4##TOTAL_REVENUE", "vPvdYKD4##ORDER_COUNT" ],
+        "columnsSelector" : [ ],
         "orders" : [ {
           "expression" : {
             "expression" : "TOTAL_REVENUE"
@@ -187,19 +43,133 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "vPvdYKD4",
+          "id" : "Cj2zbMDE",
           "slug" : "revenue_by_customer"
         } ],
         "outputs" : [ {
-          "id" : "aFprQHQf",
+          "id" : "O2OC2vn6",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      }
+      },
+      "index" : 4
     },
-    "customers##rYLgoBGf" : {
-      "id" : "customers##rYLgoBGf",
+    "revenue_by_custo##sXeToauy" : {
+      "id" : "revenue_by_custo##sXeToauy",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "revenue_by_customer",
+        "x" : 420,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Calculates total revenue and order count for each customer.",
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "_row_id" : "391758260"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "_row_id" : "74590134"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "_row_id" : "215601404"
+        }, {
+          "expression" : {
+            "expression" : "SUM(AMOUNT)"
+          },
+          "alias" : "TOTAL_REVENUE",
+          "_row_id" : "1858371401"
+        }, {
+          "expression" : {
+            "expression" : "COUNT(ORDER_ID)"
+          },
+          "alias" : "ORDER_COUNT",
+          "_row_id" : "323474270"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "_row_id" : "1321122084"
+        }, {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "_row_id" : "1323797008"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "_row_id" : "1507666566"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "g9dUUhb3",
+          "slug" : "customer_order_details"
+        } ],
+        "outputs" : [ {
+          "id" : "ytnOk3c9",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "index" : 3
+    },
+    "final##GbvCwjU9" : {
+      "id" : "final##GbvCwjU9",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "CustomerOrders",
+        "x" : 1020,
+        "y" : 120,
+        "phase" : 0,
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT *\n\nFROM top_10_rows\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WCDkrVU6",
+          "slug" : "top_10_rows"
+        } ],
+        "outputs" : [ {
+          "id" : "LbB285WK",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "index" : 6
+    },
+    "customers##MMQMNwjO" : {
+      "id" : "customers##MMQMNwjO",
       "component" : "Model",
       "metadata" : {
         "label" : "customers",
@@ -207,7 +177,6 @@
         "y" : 20,
         "phase" : 0,
         "comment" : "Retrieves the complete list of customers for analysis.",
-        "autoUpdateComment" : true,
         "isLabelGrayed" : false
       },
       "properties" : {
@@ -219,7 +188,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "cDc5ymyF",
+          "id" : "mO5FGaZw",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -227,8 +196,38 @@
       },
       "index" : 0
     },
-    "customer_order_d##X6iIiATe" : {
-      "id" : "customer_order_d##X6iIiATe",
+    "top_10_rows##eh9j5Ptp" : {
+      "id" : "top_10_rows##eh9j5Ptp",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "top_10_rows",
+        "x" : 820,
+        "y" : 120,
+        "phase" : 0,
+        "comment" : "Identifies the top 10 revenue-generating orders for performance evaluation.",
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "10"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JZSu50yB",
+          "slug" : "revenue_order_summary"
+        } ],
+        "outputs" : [ {
+          "id" : "Np95xNMo",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "index" : 5
+    },
+    "customer_order_d##Atm2g0ir" : {
+      "id" : "customer_order_d##Atm2g0ir",
       "component" : "Join",
       "metadata" : {
         "label" : "customer_order_details",
@@ -237,7 +236,6 @@
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Compiles detailed order information along with customer names for better insights into customer spending.",
-        "autoUpdateComment" : true,
         "isLabelGrayed" : false
       },
       "properties" : {
@@ -248,128 +246,124 @@
           },
           "joinType" : "INNER"
         } ],
-        "allowSelection" : false,
         "expressions" : [ {
           "expression" : {
             "expression" : "customers.CUSTOMER_ID"
           },
-          "_row_id" : "1476455641"
+          "_row_id" : "309531075"
         }, {
           "expression" : {
             "expression" : "customers.FIRST_NAME"
           },
-          "_row_id" : "2128617924"
+          "_row_id" : "702615452"
         }, {
           "expression" : {
             "expression" : "customers.LAST_NAME"
           },
-          "_row_id" : "1944671695"
+          "_row_id" : "284616713"
         }, {
           "expression" : {
             "expression" : "CONCAT(customers.FIRST_NAME, ' ', customers.LAST_NAME)"
           },
           "alias" : "FULL_NAME",
-          "_row_id" : "1242321336"
+          "_row_id" : "429428677"
         }, {
           "expression" : {
             "expression" : "orders.AMOUNT"
           },
-          "_row_id" : "1259091000"
+          "_row_id" : "207321143"
         }, {
           "expression" : {
             "expression" : "orders.ORDER_ID"
           },
-          "_row_id" : "975128129"
+          "_row_id" : "492353814"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "cpJx21A4##CUSTOMER_ID", "ie2pfqsV##CUSTOMER_ID", "cpJx21A4##CUSTOMER_ID", "cpJx21A4##FIRST_NAME", "cpJx21A4##LAST_NAME", "ie2pfqsV##AMOUNT", "ie2pfqsV##ORDER_ID" ],
+        "columnsSelector" : [ ],
         "headAlias" : "customers"
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "cpJx21A4",
+          "id" : "yWh8LMdg",
           "slug" : "customers"
         }, {
-          "id" : "ie2pfqsV",
+          "id" : "edG0VbSu",
           "slug" : "orders"
         } ],
         "outputs" : [ {
-          "id" : "w9wo0uMy",
+          "id" : "vlXtCprx",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      }
+      },
+      "index" : 2
     },
-    "top_10_rows##XrBIkcCB" : {
-      "id" : "top_10_rows##XrBIkcCB",
-      "component" : "Limit",
+    "orders##VMTQ0AIT" : {
+      "id" : "orders##VMTQ0AIT",
+      "component" : "Model",
       "metadata" : {
-        "label" : "top_10_rows",
-        "x" : 820,
-        "y" : 120,
+        "label" : "orders",
+        "x" : 20,
+        "y" : 220,
         "phase" : 0,
-        "comment" : "Identifies the top 10 revenue-generating orders for performance evaluation.",
-        "autoUpdateComment" : true,
+        "comment" : "Retrieves all order records for comprehensive analysis.",
         "isLabelGrayed" : false
       },
       "properties" : {
-        "limit" : {
-          "expression" : "10"
-        },
-        "fetchEnabled" : true,
-        "fetchType" : "NEXT"
+        "table" : {
+          "name" : "orders",
+          "sourceType" : "Model"
+        }
       },
       "ports" : {
-        "inputs" : [ {
-          "id" : "E56XrzyY",
-          "slug" : "revenue_order_summary"
-        } ],
+        "inputs" : [ ],
         "outputs" : [ {
-          "id" : "k7zA3gRc",
+          "id" : "xyZzzEVg",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      }
+      },
+      "index" : 1
     }
   },
   "connections" : [ {
-    "id" : "w10LRuG7",
-    "source" : "revenue_by_custo##ShW2oJvS",
-    "sourcePort" : "Ryfz0NBa",
-    "target" : "revenue_order_su##ZaOsRvcp",
-    "targetPort" : "vPvdYKD4"
+    "id" : "SB7A0Y6y",
+    "source" : "customers##MMQMNwjO",
+    "sourcePort" : "mO5FGaZw",
+    "target" : "customer_order_d##Atm2g0ir",
+    "targetPort" : "yWh8LMdg"
   }, {
-    "id" : "JDqmK6v7",
-    "source" : "revenue_order_su##ZaOsRvcp",
-    "sourcePort" : "aFprQHQf",
-    "target" : "top_10_rows##XrBIkcCB",
-    "targetPort" : "E56XrzyY"
+    "id" : "uN7IFLUb",
+    "source" : "orders##VMTQ0AIT",
+    "sourcePort" : "xyZzzEVg",
+    "target" : "customer_order_d##Atm2g0ir",
+    "targetPort" : "edG0VbSu"
   }, {
-    "id" : "fZAbRNAm",
-    "source" : "top_10_rows##XrBIkcCB",
-    "sourcePort" : "k7zA3gRc",
-    "target" : "final##cTFNvWUi",
-    "targetPort" : "idBchFOM"
+    "id" : "eEXKr0u2",
+    "source" : "customer_order_d##Atm2g0ir",
+    "sourcePort" : "vlXtCprx",
+    "target" : "revenue_by_custo##sXeToauy",
+    "targetPort" : "g9dUUhb3"
   }, {
-    "id" : "yFda0LL9",
-    "source" : "customers##rYLgoBGf",
-    "sourcePort" : "cDc5ymyF",
-    "target" : "customer_order_d##X6iIiATe",
-    "targetPort" : "cpJx21A4"
+    "id" : "EUfigUQu",
+    "source" : "revenue_by_custo##sXeToauy",
+    "sourcePort" : "ytnOk3c9",
+    "target" : "revenue_order_su##VEoBYtX1",
+    "targetPort" : "Cj2zbMDE"
   }, {
-    "id" : "yg6JTSco",
-    "source" : "orders##KYsLceuc",
-    "sourcePort" : "rINhqJou",
-    "target" : "customer_order_d##X6iIiATe",
-    "targetPort" : "ie2pfqsV"
+    "id" : "DRjLXvVj",
+    "source" : "revenue_order_su##VEoBYtX1",
+    "sourcePort" : "O2OC2vn6",
+    "target" : "top_10_rows##eh9j5Ptp",
+    "targetPort" : "JZSu50yB"
   }, {
-    "id" : "OjFkOYy0",
-    "source" : "customer_order_d##X6iIiATe",
-    "sourcePort" : "w9wo0uMy",
-    "target" : "revenue_by_custo##ShW2oJvS",
-    "targetPort" : "Hpyhm4yJ"
+    "id" : "TNEUiWJf",
+    "source" : "top_10_rows##eh9j5Ptp",
+    "sourcePort" : "Np95xNMo",
+    "target" : "final##GbvCwjU9",
+    "targetPort" : "WCDkrVU6"
   } ],
   "component" : "Model"
 }
