@@ -411,5 +411,7 @@ sqlOrchestratorPipelines:
     files:
     - .prophecy/ide/pipelines/top_10.json
     - pipelines/top_10.py
+    - models/top_10/top_10__top_10_customers.sql
+    - models/top_10/schema.yml
     createdAt: '2026-01-20 19:14:12'
 sqlBusinessApps: {}
